@@ -1,6 +1,8 @@
 package org.github.mahambach;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Library {
     private String name;
@@ -49,7 +51,7 @@ public class Library {
 
     // Only works if berk is a book in the library.
     public void removeBook(Book berk){
-        Book[] new_collection = new Book[collection.length -1];
+        /*Book[] new_collection = new Book[collection.length -1];
         int offset = 0;
 
         for (int i = 0; i< collection.length; i++) {
@@ -62,6 +64,24 @@ public class Library {
         }
 
         collection = new_collection;
+
+         */
+        List<Book> newCollectionList = new ArrayList<>();
+        for(Book thingy : collection){
+            if(thingy.equals(berk)) {
+
+            }
+            else{
+                newCollectionList.add(thingy);
+            }
+        }
+
+        Book [] newCollection = new Book[newCollectionList.size()];
+        for (int i = 0; i < newCollection.length; i++) {
+            newCollection[i] = newCollectionList.get(i);
+        }
+
+        collection = newCollection;
     }
 
 }

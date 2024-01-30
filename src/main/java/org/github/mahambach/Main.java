@@ -13,9 +13,12 @@ public class Main {
 
         Book book4 = new Book("Song of Ice and Fire - Book 6 Winds of Winter", "J.R.R. Martin", "1234567");
         library1.addBook(book4);
-        library1.addBook(book4);
+
 
         System.out.println(library1);
+        library1.removeBook(book4);
+        System.out.println(library1);
+
         library1.removeBook(book4);
         System.out.println(library1);
     }
