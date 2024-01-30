@@ -34,4 +34,16 @@ public class Library {
     public void setCollection(Book[] collection) {
         this.collection = collection;
     }
+
+    // Bonus Step 6 create function to add a Book
+    public void addBook(Book berk){
+        Book[] new_collection = new Book[collection.length + 1];
+        for(int i = 0; i < collection.length; i++)
+        {
+            new_collection[i] = collection[i];
+        }
+        new_collection[new_collection.length - 1] = berk;
+        collection = new Book[new_collection.length];
+        collection = new_collection;
+    }
 }

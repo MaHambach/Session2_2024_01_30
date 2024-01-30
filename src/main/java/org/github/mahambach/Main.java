@@ -9,8 +9,11 @@ public class Main {
 
         Book[] bookarray= {book1, book2, book3};
         Library library1 = new Library("Gute Bücher", bookarray);
+        System.out.println(library1);
 
+        Book book4 = new Book("Song of Ice and Fire - Book 6 Winds of Winter", "J.R.R. Martin", "1234567");
+        library1.addBook(book4);
+
+        System.out.println(library1);
     }
-
-
 }
