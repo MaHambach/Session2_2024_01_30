@@ -1,5 +1,7 @@
 package org.github.mahambach;
 
+import java.util.Arrays;
+
 public class Library {
     private String name;
     private Book[] collection;
@@ -19,6 +21,14 @@ public class Library {
 
     public Book[] getCollection() {
         return collection;
+    }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "name='" + name + '\'' +
+                ", collection=" + Arrays.toString(collection) +
+                '}';
     }
 
     public void setCollection(Book[] collection) {
