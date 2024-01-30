@@ -46,4 +46,22 @@ public class Library {
         collection = new Book[new_collection.length];
         collection = new_collection;
     }
+
+    // Only works if berk is a book in the library.
+    public void removeBook(Book berk){
+        Book[] new_collection = new Book[collection.length -1];
+        int offset = 0;
+
+        for (int i = 0; i< collection.length; i++) {
+            if(collection[i].equals(berk)){
+                offset = 1;
+            }
+            else{
+                new_collection[i-offset] = collection[i];
+            }
+        }
+
+        collection = new_collection;
+    }
+
 }
